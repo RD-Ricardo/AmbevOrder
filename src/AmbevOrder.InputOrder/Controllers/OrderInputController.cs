@@ -11,8 +11,8 @@ namespace AmbevOrder.InputOrder.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateOrderAsync([FromBody] OrderCreateDto orderCreateDto, [FromServices] IOrderService orderService)
         {
-            await orderService.CreateOrderAsync(orderCreateDto);
-            return Ok(new { message = "Order created successfully" });
+            var orderId = await orderService.CreateOrderAsync(orderCreateDto);
+            return Ok(new { message = "Order created successfully", OrderId = orderId });
         }
     }
 }

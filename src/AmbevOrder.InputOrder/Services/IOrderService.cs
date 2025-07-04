@@ -4,6 +4,6 @@ namespace AmbevOrder.InputOrder.Services
 {
     public interface IOrderService
     {
-        Task CreateOrderAsync(OrderCreateDto orderCreateDto);
+        Task<Guid> CreateOrderAsync(OrderCreateDto orderCreateDto);
     }
 }

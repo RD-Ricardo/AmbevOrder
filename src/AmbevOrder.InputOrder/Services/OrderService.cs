@@ -12,7 +12,7 @@ namespace AmbevOrder.InputOrder.Services
             _configuration = configuration;
         }
 
-        public async Task CreateOrderAsync(OrderCreateDto orderCreateDto)
+        public async Task<Guid> CreateOrderAsync(OrderCreateDto orderCreateDto)
         {
             if (orderCreateDto == null)
             {
@@ -44,6 +44,8 @@ namespace AmbevOrder.InputOrder.Services
             };
 
             await serviceBusSender.SendMessageAsync(orderMessage);
+
+            return orderCreateDto.Id;
         }
     }
 }
