@@ -1,6 +1,6 @@
 ﻿using AmbevOrder.ProcessOrder.Dto;
 
-namespace AmbevOrder.ProcessOrder.Services
+namespace AmbevOrder.ProcessOrder.Services.Interfaces
 {
     public interface IProcessOrderService
     {

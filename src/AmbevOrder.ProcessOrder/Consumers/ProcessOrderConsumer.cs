@@ -1,5 +1,5 @@
 ﻿using AmbevOrder.ProcessOrder.Dto;
-using AmbevOrder.ProcessOrder.Services;
+using AmbevOrder.ProcessOrder.Services.Interfaces;
 using Azure.Messaging.ServiceBus;
 
 namespace AmbevOrder.ProcessOrder.Consumers

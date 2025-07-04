@@ -6,6 +6,6 @@
         Task<Entities.Order?> GetByExternIdAsync(Guid externId);
         Task<Entities.Order?> GetByIdAsync(Guid id);
         Task UpdateAsync(Entities.Order order);
-        Task<IEnumerable<Entities.Order>> GetAllAsync();
+        Task<List<Entities.Order>> GetAllAsync();
     }
 }

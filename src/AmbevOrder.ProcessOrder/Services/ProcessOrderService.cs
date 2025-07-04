@@ -2,6 +2,7 @@
 using AmbevOrder.ProcessOrder.Dto;
 using AmbevOrder.ProcessOrder.Entities;
 using AmbevOrder.ProcessOrder.Repositories;
+using AmbevOrder.ProcessOrder.Services.Interfaces;
 using Azure.Messaging.ServiceBus;
 
 namespace AmbevOrder.ProcessOrder.Services

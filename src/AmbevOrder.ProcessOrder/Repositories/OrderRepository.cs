@@ -18,9 +18,9 @@ namespace AmbevOrder.ProcessOrder.Repositories
             return _dbContext.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<Order>> GetAllAsync()
+        public Task<List<Order>> GetAllAsync()
         {
-            return Task.FromResult<IEnumerable<Order>>(_dbContext.Orders.ToList());
+            return _dbContext.Orders.Include(x => x.Items).ToListAsync();
         }
 
         public Task<Order?> GetByExternIdAsync(Guid externId)
