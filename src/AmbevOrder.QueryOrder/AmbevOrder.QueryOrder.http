@@ -1,0 +1,6 @@
+@AmbevOrder.QueryOrder_HostAddress = http://localhost:5072
+
+GET {{AmbevOrder.QueryOrder_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
