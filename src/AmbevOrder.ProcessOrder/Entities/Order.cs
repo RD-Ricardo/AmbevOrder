@@ -6,14 +6,13 @@
         public Guid ExternId { get; private set; }
         public string CustomerName { get; private set; } = null!;
         public decimal FreightPrice { get; private set; }
-        public List<OrderItem> Items { get; private set; } = null!;
         public DateTime? ProcessedAt { get; private set; }
         public DateTime? PaidAt { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public OrderStatus Status { get; private set; }
         public string? ErrorMessage { get; private set; }
         public decimal TotalPrice { get; private set; }
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public List<OrderItem> Items { get; private set; } = null!;
         public Order() { }
         public Order(Guid externId, string customerName, decimal freightPrice)
         {

@@ -67,10 +67,7 @@ namespace AmbevOrder.ProcessOrder.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("OrderId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("OrderId1")
+                    b.Property<Guid>("OrderId")
                         .HasColumnType("uuid");
 
                     b.Property<decimal>("Price")
@@ -87,27 +84,23 @@ namespace AmbevOrder.ProcessOrder.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.HasIndex("OrderId1");
-
                     b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("AmbevOrder.ProcessOrder.Entities.OrderItem", b =>
                 {
-                    b.HasOne("AmbevOrder.ProcessOrder.Entities.Order", null)
+                    b.HasOne("AmbevOrder.ProcessOrder.Entities.Order", "Order")
                         .WithMany("Items")
-                        .HasForeignKey("OrderId");
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("AmbevOrder.ProcessOrder.Entities.Order", null)
-                        .WithMany("OrderItems")
-                        .HasForeignKey("OrderId1");
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("AmbevOrder.ProcessOrder.Entities.Order", b =>
                 {
                     b.Navigation("Items");
-
-                    b.Navigation("OrderItems");
                 });
 #pragma warning restore 612, 618
         }
