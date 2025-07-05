@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AmbevOrder.ProcessOrder.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
         [HttpGet]
