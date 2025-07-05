@@ -19,6 +19,7 @@ O serviço **Order** atua como um orquestrador de pedidos:
 - API RESTful
 - [AKS (Azure Kubernetes Service)](https://learn.microsoft.com/azure/aks/)
 - [HELM](https://helm.sh/)
+- [Docker](https://www.docker.com/)
 
 ### 📦 Exemplo de Requisição Criar Pedido
 
