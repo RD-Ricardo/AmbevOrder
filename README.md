@@ -53,7 +53,7 @@ Response:
 
 ### 📦 Exemplo de Requisição visualisar produtos processado:
 ```bash
-curl --location 'https://ambev-order-process.rdsolutions.digital/api/Order'´
+curl --location 'https://ambev-order-process.rdsolutions.digital/api/Order'
 `````
 
 Reponse:
