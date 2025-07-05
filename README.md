@@ -60,27 +60,32 @@ Reponse:
 
 ```bash
 [
-  {
-    "orderId": "35fee97e-2125-46d0-8363-9846b60f7b05",
-    "customerName": "Ricardo Dias",
-    "freightPrice": 25.50,
-    "totalPrice": 81.30,
-    "status": "Processed",
-    "items": [
-      {
-        "productName": "Cerveja Skol Lata 350ml",
-        "price": 3.50,
-        "quantity": 12,
-        "total": 42.00
-      },
-      {
-        "productName": "Guaraná Antarctica 2L",
-        "price": 6.90,
-        "quantity": 3,
-        "total": 20.70
-      }
-    ]
-  }
+    {
+        "id": "7ee4a40d-df9c-4647-9170-9de9339deae8",
+        "externId": "35fee97e-2125-46d0-8363-9846b60f7b05",
+        "customerName": "Ricardo Dias",
+        "freightPrice": 28.05,
+        "processedAt": "2025-07-05T01:16:14.79509Z",
+        "paidAt": "2025-07-05T01:16:14.79502Z",
+        "createdAt": "2025-07-05T01:16:14.62636Z",
+        "status": "Processed",
+        "errorMessage": null,
+        "totalPrice": 90.75,
+        "items": [
+            {
+                "id": "b592e452-7d71-4301-a309-9ab3a25624dd",
+                "productName": "Guaraná Antarctica 2L",
+                "price": 6.90,
+                "quantity": 3
+            },
+            {
+                "id": "c795b48e-8b7c-4c08-a86a-8f57a2e1aaa6",
+                "productName": "Cerveja Skol Lata 350ml",
+                "price": 3.50,
+                "quantity": 12
+            }
+        ]
+    }
 ]
 `````
 
